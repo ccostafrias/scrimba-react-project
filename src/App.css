@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html, body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #282D35;
+    background-image: url('./images/react-icon-large.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.logo {
+    width: 40px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #21222A;
+}
+
+.nav > h2 {
+    margin-left: 10px;
+    color: #61DAFB;
+    font-weight: 700;
+}
+
+.nav > h3 {
+    margin-left: auto;
+    font-weight: 600;
+}
+
+.main {
+    padding: 20px;
+    margin: auto;
+    max-width: 700px;
+}
+
+main > ul > li {
+    margin-bottom: 1em;
+}
+
+main > ul > li::marker {
+    color: #61DAFB;
+    font-size: 1.5em;
+}
