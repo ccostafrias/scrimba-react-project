@@ -3,15 +3,20 @@
 html, body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    color: white;
+
 }
 
 body {
-    background-color: #282D35;
-    background-image: url('./images/react-icon-large.png');
+    background-image: url('./images/react-icon-light.png');
     background-position: right;
     background-repeat: no-repeat;
     min-height: 100vh;
+}
+
+body:has(.dark) {
+    background-image: url('./images/react-icon-dark.png');
+    background-color: #282D35;
+    color: white;
 }
 
 .logo {
@@ -22,7 +27,12 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav.dark {
     background-color: #21222A;
+    box-shadow: none;
 }
 
 .nav > h2 {
@@ -31,9 +41,51 @@ body {
     font-weight: 700;
 }
 
-.nav > h3 {
+.nav > :last-child {
     margin-left: auto;
     font-weight: 600;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+.toggler p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 40px;
+    height: 20px;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: #2B283A;
+    border: 1px solid black;
+}
+
+.nav.dark .toggler--slider {
+    background-color: #F5F5F5;
+    border: 1px solid white;
+    justify-content: flex-end;
+}
+
+
+.toggler--slider--circle {
+    aspect-ratio: 1/1;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.nav.dark .toggler--slider--circle {
+    background-color: black;
 }
 
 .main {
@@ -42,11 +94,11 @@ body {
     max-width: 700px;
 }
 
-main > ul > li {
+.main > ul > li {
     margin-bottom: 1em;
 }
 
-main > ul > li::marker {
+.main > ul > li::marker {
     color: #61DAFB;
     font-size: 1.5em;
 }

@@ -1,9 +1,10 @@
 import React from "react"
 
-function MainContent() {
+function MainContent(props) {
+    const {dark} = props
     return (
         <>
-            <main className="main">
+            <main className={`main ${dark ? "dark" : ""}`}>
                 <h1>Fun facts about React</h1>
                 <ul>
                     <li>Was first released in 2013</li>
